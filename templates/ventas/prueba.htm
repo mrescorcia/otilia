@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<h2> Nuevo Producto </h2>
+<h1>{{msg}} </h1>
+<form method="POST">
+  {% csrf_token %}
+  <fieldset>
+    <input type="hidden" name="index" id="index" value="1">
+    <div class="mb-3">
+        <label for="textcategoria" class="form-label">Categorias</label>
+        <select class="form-select" aria-label="Default select example" id="categoria" name="categoria" required>
+          <option selected>--Seleccione--</option>
+          {% for reg in categorias %}
+          <option value="{{reg.idcategorias}}">{{reg.idcategorias}}--{{reg.nombrecategoria}}</option>
+  
+          {% endfor %}
+        </select>
+      </div>
+
+    <!--div class="mb-3">
+      <label for="txtcosto" class="form-label"> Costo</label>
+      <input type="text" name="costo" id="costo" class="form-control" placeholder="costo" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="txa" class="form-label"> Observacion</label>
+      <input type="text" name="observacion" id="observacion" class="form-control" placeholder="obs" multiple>
+    </div>
+
+    <div class="mb-3">
+      <label for="textcliente" class="form-label">Cliente</label>
+      <select class="form-select" aria-label="Default select example" id="cliente" name="cliente" required>
+        <option selected>--Seleccione--</option>
+        {% for reg in clientes %}
+        <option value="{{reg.id}}">{{reg.id}}--{{reg.nombres}} {{reg.apellidos}} </option>
+
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="textvehiculos" class="form-label">Vehiculos</label>
+      <select class="form-select" aria-label="Default select example" id="vehiculo" name="vehiculo" required>
+
+      </select>
+    </div>
+  </fieldset-->
+  <button type="submit" class="btn btn-primary">Guardar</button>
+
+</form>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'home.html' %}
+
+{% block contenido %}
+<h2> Formulario Venta </h2>
+<h1>{{msg}} </h1>
+<form method="POST">
+    {% csrf_token %}
+    <fieldset>
+        <input type="hidden" name="index" id="index" value="1">
+        <div class="mb-3">
+            <label for="txtfecha" class="form-label">Numero Venta</label>
+            <input type="number" name="fecha" id="fecha" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="textcliente" class="form-label">Cliente</label>
+            <select class="form-select" aria-label="Default select example" id="cliente" name="cliente" required>
+                <option selected>--Seleccione--</option>
+                {% for reg in clientes %}
+                <option value="{{reg.idclientes}}">{{reg.idclientes}}-{{reg.documentocliente}}-{{reg.nombrescliente}} </option>
+
+                {% endfor %}
+            </select>
+        </div>
+
+        <!--div class="mb-3">
+            <label for="txtfecha" class="form-label">Fecha</label>
+            <input type="date" name="fecha" id="fecha" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="txa" class="form-label">Total Venta</label>
+            <input type="text" name="observacion" id="observacion" class="form-control" placeholder="obs" multiple>
+        </div-->
+
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+
+</form>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!--script>
+    
+    $("#cliente").change(function () {
+        var url = "/loadcar/";
+        var clienteId = $(this).val(); //get id cliente 
+        $.ajax({
+            url: url,
+            data: {
+                'cliente': clienteId
+            },
+            success: function (data) {
+                $("#vehiculo").html(data);
+            }
+        });
+    });
+
+    
+
+
+</script-->
+{% endblock %}
