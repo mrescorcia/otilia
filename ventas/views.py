@@ -14,7 +14,7 @@ from ventas.models import Clientes, EstadoProducto, Categorias, Ventas
 
 #@login_required(login_url='/account/login/')
 def index(request):
-    return render(request, 'home.html')
+    return render(request, 'base.html')
 
 def nuevaventa(request):
     ventas = Ventas.objects.all()
