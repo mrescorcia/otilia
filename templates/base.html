@@ -45,26 +45,26 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Ventas
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/nuevaventa/">Nueva Venta</a></li>
-                                <li>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/nuevaventa/">Nueva Venta</a>
+                                
                                     <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Vacio</a></li>
-                            </ul>
+                                
+                                <a class="dropdown-item" href="#">Vacio</a>
+                            </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Gestion de datos
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Listado de vehiculos</a></li>
-                                <li>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Listado de vehiculos</a>
+                                
                                     <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Nueva Infraccion</a></li>
-                            </ul>
+                                
+                                <a class="dropdown-item" href="#">Nueva Infraccion</a>
+                            </div>
                         </li>
                         {% if user.email %}
                         <li class="nav-item dropdown">
