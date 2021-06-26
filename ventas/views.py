@@ -27,5 +27,10 @@ def agregarProducto(request):
     estado_producto = EstadoProducto.objects.all()
     categorias = Categorias.objects.all()
     data = {'estadoProducto': estado_producto, 'categorias': categorias}
-
     return render(request, 'ventas/prueba.html', data)
+
+def listarProductos(request):
+    #cursor=connection.cursor()
+    #cursor.execute("call prueba()")
+    #results=cursor.fetchall()
+    return render(request, 'productos/listadoProductos.html')
