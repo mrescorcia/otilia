@@ -29,43 +29,12 @@
             <!--a class="navbar-brand" href="/">Otilia</a-->
             <a title="Otilia" href="/"><img class="rounded mx-auto d-block" width="50"
                     src="{% static 'img/OtiliaTransparente.png' %}" alt="Los Tejos" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <!--li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Inicio</a>
-                        </li-->
-                    <!--li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-expanded="false">
-                                Ventas
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/nuevaventa/">Nueva Venta</a>
-                                
-                                    <hr class="dropdown-divider">
-                                
-                                <a class="dropdown-item" href="#">Vacio</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-expanded="false">
-                                Gestion de datos
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Listado de vehiculos</a>
-                                
-                                    <hr class="dropdown-divider">
-                                
-                                <a class="dropdown-item" href="#">Nueva Infraccion</a>
-                            </div>
-                        </li-->
-
                     {% if user.email %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
