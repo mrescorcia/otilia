@@ -18,12 +18,13 @@
             alt="Los Tejos" />
     </div>
 </div>
+{% for reg in productos %}
 <div class="row my-4">
     <table class="table table-bordered">
         <thead>
             <tr>
                 <th scope="col">1.Nombre</th>
-                <th>Adaptador Usb Bluetooth 5.0 | Easy Idea</th>
+                <th>{{reg.nombreProducto}}</th>
             </tr>
         </thead>
         <tbody>
@@ -33,42 +34,44 @@
             </tr>
             <tr>
                 <th scope="col">3.Código</th>
-                <td>Receptor y transmisor de audio y archivos</td>
+                <td>{{reg.codigoProducto}}</td>
             </tr>
             <tr>
                 <th scope="col">4.SKU</th>
-                <td>PC con Windows 98 hasta Windows 10 (NO compatible con MAC o Linux)</td>
+                <td>{{reg.sku}}</td>
             </tr>
             <tr>
-                <th scope="col">5.Plataforma(Funciona en)</th>
-                <td>Receptor y transmisor de audio y archivos</td>
+                <th scope="col">5.Costo Producto</th>
+                <td>{{reg.costoProducto}}</td>
             </tr>
             <tr>
-                <th scope="col">3.Funciones</th>
-                <td>Receptor y transmisor de audio y archivos</td>
+                <th scope="col">3.precioProducto</th>
+                <td>{{reg.precioProducto}}</td>
             </tr>
             <tr>
-                <th scope="col">3.Funciones</th>
-                <td>Receptor y transmisor de audio y archivos</td>
+                <th scope="col">3.marcaProducto</th>
+                <td>{{reg.marcaProducto}}</td>
             </tr>
             <tr>
-                <th scope="col">3.Funciones</th>
-                <td>Receptor y transmisor de audio y archivos</td>
+                <th scope="col">3.modeloProducto</th>
+                <td>{{reg.modeloProducto}}</td>
             </tr>
             <tr>
-                <th scope="col">3.Funciones</th>
-                <td>Receptor y transmisor de audio y archivos</td>
+                <th scope="col">3.cantidadProducto</th>
+                <td>{{reg.cantidadProducto}}</td>
             </tr>
             <tr>
-                <th scope="col">3.Funciones</th>
-                <td>Receptor y transmisor de audio y archivos</td>
+                <th scope="col">3.ivaProducto</th>
+                <td>{{reg.ivaProducto}}</td>
             </tr>
             <tr>
-                <th scope="col">3.Funciones</th>
-                <td>Receptor y transmisor de audio y archivos</td>
+                <th scope="col">3.detalles</th>
+                <td>{{reg.detalles}}</td>
             </tr>
         </tbody>
 
     </table>
 </div>
+{% endfor %}
+
 {% endblock %}

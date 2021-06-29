@@ -8,7 +8,7 @@ from django.template.loader import get_template
 
 from django.contrib.auth.decorators import login_required
 
-from ventas.models import Clientes, EstadoProducto, Categorias, Ventas
+from ventas.models import Clientes, EstadoProducto, Categorias, Ventas, Productos
 
 # Create your views here.
 
@@ -33,4 +33,6 @@ def listarProductos(request):
     #cursor=connection.cursor()
     #cursor.execute("call prueba()")
     #results=cursor.fetchall()
-    return render(request, 'productos/listadoProductos.html')
+    productos = Productos.objects.all()
+    data = {'productos',productos}
+    return render(request, 'productos/listadoProductos.html', data)
