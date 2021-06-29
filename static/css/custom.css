@@ -1,0 +1,10 @@
+#thead-list-productos {
+    text-align: center;
+    font-size: medium;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#td-detalles-productos {
+    text-align: justify;
+    max-width: 200px;
+}
