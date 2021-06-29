@@ -34,5 +34,5 @@ def listarProductos(request):
     #cursor.execute("call prueba()")
     #results=cursor.fetchall()
     productos = Productos.objects.all()
-    data = {'productos',productos}
+    data = {'productos': productos}
     return render(request, 'productos/listadoProductos.html', data)
