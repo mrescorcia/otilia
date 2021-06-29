@@ -123,6 +123,7 @@ class Productos(models.Model):
     categorias_idcategorias = models.ForeignKey(Categorias, models.DO_NOTHING, db_column='categorias_idcategorias')
     estado_producto_idestado_producto = models.ForeignKey(EstadoProducto, models.DO_NOTHING, db_column='estado_producto_idestado_producto')
     nombreproducto = models.CharField(db_column='nombreProducto', max_length=70)  # Field name made lowercase.
+    imagenproducto = models.TextField(db_column='imagenProducto', max_length=200)  # Field name made lowercase.
     codigoproducto = models.CharField(db_column='codigoProducto', max_length=45, blank=True, null=True)  # Field name made lowercase.
     sku = models.CharField(max_length=45, blank=True, null=True)
     costoproducto = models.FloatField(db_column='costoProducto', blank=True, null=True)  # Field name made lowercase.
@@ -134,7 +135,6 @@ class Productos(models.Model):
     created = models.DateTimeField(blank=True, null=True)
     modified = models.DateTimeField(blank=True, null=True)
     detalles = models.TextField(db_column='detalles', max_length=2000)  # Field name made lowercase.
-    imagenproducto = models.TextField(db_column='imagenProducto', max_length=200)  # Field name made lowercase.
     def __str__(self):
         return str(self.idproductos) + '-' + self.nombreproducto
 
