@@ -133,6 +133,7 @@ class Productos(models.Model):
     ivaproducto = models.FloatField(db_column='ivaProducto', blank=True, null=True)  # Field name made lowercase.
     created = models.DateTimeField(blank=True, null=True)
     modified = models.DateTimeField(blank=True, null=True)
+    detalles = models.CharField(db_column='detalles', max_length=200)  # Field name made lowercase.
     def __str__(self):
         return str(self.idproductos) + '-' + self.nombreproducto
 
