@@ -134,6 +134,7 @@ class Productos(models.Model):
     created = models.DateTimeField(blank=True, null=True)
     modified = models.DateTimeField(blank=True, null=True)
     detalles = models.TextField(db_column='detalles', max_length=2000)  # Field name made lowercase.
+    imagenproducto = models.TextField(db_column='imagenProducto', max_length=200)  # Field name made lowercase.
     def __str__(self):
         return str(self.idproductos) + '-' + self.nombreproducto
 
