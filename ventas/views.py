@@ -36,3 +36,11 @@ def listarProductos(request):
     productos = Productos.objects.all()
     data = {'productos': productos}
     return render(request, 'productos/listadoProductos.html', data)
+
+def buscadorProductos(request):
+    #cursor=connection.cursor()
+    #cursor.execute("call prueba()")
+    #results=cursor.fetchall()
+    productos = Productos.objects.all()
+    data = {'productos': productos}
+    return render(request, 'productos/buscadorProductos.html', data)    
