@@ -7,3 +7,7 @@
     text-align: right;
     max-width: 200px;
 }
+
+#prueba {
+    text-transform: inherit;
+}
