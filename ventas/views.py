@@ -44,3 +44,10 @@ def buscadorProductos(request):
     productos = Productos.objects.all()
     data = {'productos': productos}
     return render(request, 'productos/buscadorProductos.html', data)    
+
+def getproducto(request):
+    texto = request.GET.get('servicio')
+    ind = request.GET.get('id')
+    productos = Productos.objects.filter(descripcion__startswith=texto)
+    data = {'productos': productos, 'ind': ind}
+    return render(request, "productos/autocomplete.html", data)
