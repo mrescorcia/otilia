@@ -35,7 +35,7 @@ def listarProductos(request):
     #results=cursor.fetchall()
     productos = Productos.objects.all()
     data = {'productos': productos}
-    return render(request, 'productos/listadoProductos.html', data)
+    return render(request, 'inventario/listadoProductos.html', data)
 
 def buscadorProductos(request):
     #cursor=connection.cursor()
@@ -43,11 +43,11 @@ def buscadorProductos(request):
     #results=cursor.fetchall()
     productos = Productos.objects.all()
     data = {'productos': productos}
-    return render(request, 'productos/buscadorProductos.html', data)    
+    return render(request, 'inventario/buscadorProductos.html', data)    
 
 def getproducto(request):
     texto = request.GET.get('servicio')
     ind = request.GET.get('id')
     productos = Productos.objects.filter(descripcion__startswith=texto)
     data = {'productos': productos, 'ind': ind}
-    return render(request, "productos/autocomplete.html", data)
+    return render(request, "inventario/autocomplete.html", data)
