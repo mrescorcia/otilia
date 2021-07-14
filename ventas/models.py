@@ -34,6 +34,8 @@ class Clientes(models.Model):
     correocliente = models.CharField(db_column='correoCliente', max_length=45, blank=True, null=True)  # Field name made lowercase.
     created = models.DateTimeField(blank=True, null=True)
     modified = models.DateTimeField(blank=True, null=True)
+    def __str__(self):
+        return self.documentocliente + '-' + self.nombrescliente + ' ' + self.apellidoscliente
 
     class Meta:
         managed = False
