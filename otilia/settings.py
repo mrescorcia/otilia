@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['159.89.85.126', 'localhost']
 
+#ALLOWED_HOSTS = []
+
 
 # Application definition
 
@@ -84,6 +86,17 @@ DATABASES = {
         'PORT': 3306,
     }
 }
+
+"""DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'otilia',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': 3306,
+    }
+}"""
 
 
 # Password validation
