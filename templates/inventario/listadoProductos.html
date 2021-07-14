@@ -14,8 +14,7 @@
         <h6>3002457435 – compumarana@gmail.com</h6>
     </div>
     <div class="col">
-        <img class="rounded mx-auto d-block" width="100" src="{% static 'img/compumarana.png' %}"
-            alt="Los Tejos" />
+        <img class="rounded mx-auto d-block" width="100" src="{% static 'img/compumarana.png' %}" alt="Los Tejos" />
     </div>
 </div>
 {% for reg in productos %}
@@ -24,44 +23,52 @@
         <thead id="">
             <tr>
                 <th scope="col">1.Nombre</th>
-                <th>{{reg.nombreproducto}}</th>
+                <th scope="col">2.Imagen</th>
+                <th scope="col">3.Código</th>
+                <th scope="col">4.SKU</th>
+                <th scope="col">5.Costo Producto</th>
+                <th scope="col">6.Precio Producto</th>
+                <th scope="col">7.Marca Producto</th>
+                <th scope="col">8.Modelo Producto</th>
+                <th scope="col">9.Cantidad Producto</th>
+                <th scope="col">10.IVA Producto</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="col">2.Imagen</th>
+                <th>{{reg.nombreproducto}}</th>
                 <td><img src="{{reg.imagenproducto}}" alt=""></td>
             </tr>
             <tr>
-                <th scope="col">3.Código</th>
+
                 <td>{{reg.codigoproducto}}</td>
             </tr>
             <tr>
-                <th scope="col">4.SKU</th>
+
                 <td>{{reg.sku}}</td>
             </tr>
             <tr>
-                <th scope="col">5.Costo Producto</th>
+
                 <td>{{reg.costoproducto}}</td>
             </tr>
             <tr>
-                <th scope="col">6.Precio Producto</th>
+
                 <td>{{reg.precioproducto}}</td>
             </tr>
             <tr>
-                <th scope="col">7.Marca Producto</th>
+
                 <td>{{reg.marcaproducto}}</td>
             </tr>
             <tr>
-                <th scope="col">8.Modelo Producto</th>
+
                 <td>{{reg.modeloproducto}}</td>
             </tr>
             <tr>
-                <th scope="col">9.Cantidad Producto</th>
+
                 <td>{{reg.cantidadproducto}}</td>
             </tr>
             <tr>
-                <th scope="col">10.IVA Producto</th>
+
                 <td>{{reg.ivaproducto}}</td>
             </tr>
             <tr>
