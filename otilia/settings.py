@@ -76,6 +76,7 @@ WSGI_APPLICATION = 'otilia.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+#---BD Server
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
